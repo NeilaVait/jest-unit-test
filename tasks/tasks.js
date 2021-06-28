@@ -1,4 +1,5 @@
 "use strict";
+
 const people = [
     {
         id: "it51",
@@ -68,6 +69,10 @@ const people = [
     },
 ];
 
+function allPeople() {
+    return people;
+}
+
 // console.log(people);
 
 // 1. Naudojant Array.prototype.forEach atspausdinti visus vyrus.
@@ -132,6 +137,8 @@ const countDrivers = function (person) {
     }
 };
 people.forEach(countDrivers);
+
+
 
 console.log("drivingMaleCount", drivingMaleCount);
 console.log("drivingFemaleCount", drivingFemaleCount);
@@ -240,3 +247,26 @@ people.sort((a, b) => {
 
 console.log("after sort", people);
 console.table(people, ["age", "name", "income"]);
+
+function returnDrivers(arr) {
+    const result = {
+        male: 0,
+        female: 0
+    }
+
+    arr.forEach((p) => {
+        if (p.hasCar) {
+            p.sex === 'male' ? result.male++ : result.female++
+        }
+    })
+    return result;
+}
+
+
+
+module.exports = {
+    returnDrivers,
+    allPeople,
+    noSexNameSurname,
+    nameSurnameArr,
+};
