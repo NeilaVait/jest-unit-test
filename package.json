@@ -22,5 +22,8 @@
   "homepage": "https://github.com/NeilaVait/jest-unit-test#readme",
   "devDependencies": {
     "jest": "^27.0.5"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
   }
 }

@@ -19,6 +19,8 @@ function notMoreThan(val) {
     return goods1 + goods2 < val ? true : false;
 }
 
+
+
 console.log(add(5, 10));
 
 module.exports = {

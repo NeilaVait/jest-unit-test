@@ -24,7 +24,7 @@ it('should be falsy', () => {
     expect(showValue(undefined)).toBeFalsy()
     expect(showValue(null)).toBeFalsy()
     expect(showValue([])).not.toBeFalsy()
-    expect(showValue({})).toBeFalsy()
+    expect(showValue({})).not.toBeFalsy()
 });
 
 it('should be no more than 400', () => {
