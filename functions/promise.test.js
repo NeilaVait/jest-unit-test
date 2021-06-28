@@ -7,3 +7,9 @@ it('email should be Shanna@melissa.tv', () => {
         expect(data.email).toBe('Shanna@melissa.tv')
     });
 });
+
+it('email should be Shanna@melissa.tv ASYNC', async () => {
+    expect.assertions(1);
+    const data = await getUser()
+    expect(data.email).toBe('Shanna@melissa.tv')
+});
